@@ -1,0 +1,30 @@
+---
+theraters:
+  - sandhya: noraml
+    showing:
+      - 11:00
+      - 10:00
+    moves:
+      - a
+  - tulasi: maltiflex
+    shoing:
+      - 12:00
+    movies:
+      - a
+      - b
+      - c
+  - btm mal: maltiflex
+    showing:
+      - 12:00
+      - 13:30
+    movies:
+      - a
+  - Murthi: my dad
+    showing:
+      - 12:00
+      - 14:00
+    movies:
+      - a
+      - b
+   
+

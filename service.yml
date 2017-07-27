@@ -1,0 +1,17 @@
+---
+- hosts: all
+  become: yes
+  tasks: 
+  - name: install apache server
+    yum: 
+      name: httpd
+      state: present
+  - name: services start
+    service: 
+      name: httpd
+      state: started
+      enabled: yes
+  - name: ensaure apache service running
+    service: 
+      name: httpd
+      state: present 
