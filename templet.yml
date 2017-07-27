@@ -1,0 +1,7 @@
+---
+- hosts:
+  tasks: 
+  - name: creat hosrname and os
+  - template:
+    src: info.j2
+    dest: /home/ansible/info
