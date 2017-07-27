@@ -1,0 +1,16 @@
+---
+- hoste: all
+  become: yes
+  tasks: 
+  - name: install apahe on redhat and ubuntu
+    yum: 
+     name: httpd
+     state: started
+     when: ansibible_os_family == "RedHat"
+  - name: ubuntu install
+    apt:
+      name: apache2
+      state: present
+      when: ansible_os_family == "Debain"
+
+
