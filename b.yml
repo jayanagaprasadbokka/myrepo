@@ -1,0 +1,28 @@
+---
+- hosts: all 
+  become: yes
+  tasks: 
+  - name: find whomi
+    command: whomai
+    ping: 
+  - name: which directory
+    command: pwd
+    ping:
+  - name: uninstall tree
+    yum:
+      name: tree
+      state: abesent
+---
+- hosts: all
+  become: yes
+  tasks:
+  - name: find who is executing
+    command: whoami
+  - name: ping all
+    ping:
+  - name: find out current directory
+    command: pwd
+  - name: UnInstall tree
+    yum: 
+      name: tree
+      state: absent
