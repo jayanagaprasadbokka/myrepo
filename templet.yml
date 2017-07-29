@@ -1,7 +1,8 @@
 ---
-- hosts:
-  tasks: 
-  - name: creat hosrname and os
-  - template:
-    src: info.j2
-    dest: /home/ansible/info
+- hosts: all
+  become: yes
+  tasks:  
+    - name: host name & os
+    - template:
+        src: info.j2
+        dest: /home/ansible/myrepo/myrepo/info 
