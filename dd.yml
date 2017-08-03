@@ -1,0 +1,23 @@
+---
+- hosts: all
+  become: yes
+  var:
+    common:  dlfkmsdklgf4
+ # include_var: .yml
+  #include:  ping.yml  
+  tasks: 
+  - name: install apache server
+    yum: 
+      name: "{{pack_instalation}}"
+      state: present
+    when: ansible_os_family=="Redhat"
+  - name: install apache server
+    apt: 
+      name: "{{pack_instalation}}"
+      state: present
+    when: ansible_os_family=="Debian"
+  - name: services start
+    service: 
+      name: httpd
+      state: started
+      enabled: yes
