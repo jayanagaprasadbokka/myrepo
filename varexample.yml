@@ -6,10 +6,11 @@
     yum: 
       name: httpd
       when: ansibible_os_family == "RedHat"
-      service: 
-        name: httpd
-        state: start
-        enable: yes
+  - name: rester services  
+    service: 
+      name: httpd
+      state: start
+      enable: yes
   - name: ubuntu install
     apt:
       name: apache2

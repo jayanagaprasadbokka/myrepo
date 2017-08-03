@@ -1,0 +1,8 @@
+---
+- host: all
+  become: yes
+  tasks:
+  - name: ping all
+    ping: 
+  - name: find os
+    command: lsb_release -a
