@@ -1,4 +1,4 @@
 resource "local_file" "myfile" {
-    content = "thsi is creating instatant"
+    content = "this is creating instatant"
     filename = "/etc/mylocal"
 }
